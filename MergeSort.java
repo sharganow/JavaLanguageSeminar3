@@ -86,8 +86,7 @@ public class MergeSort {
         }
     }
 
-    public static void main(String[] Args) {
-        ArrayList<Integer> list = getMergeSortedList(getRandomList(0, 1000, 128));
+    static void printArray(ArrayList<Integer> list){
         Iterator<Integer> col = list.iterator();
         while (col.hasNext()){
             for (int i = 0; i < 10; i++) {
@@ -100,5 +99,11 @@ public class MergeSort {
             }
             System.out.println();
         }
+    }
+
+    public static void main(String[] Args) {
+        ArrayList<Integer> list = getRandomList(0, 1000, 128);
+        list = getMergeSortedList(list);
+        printArray(list);
     }
 }
